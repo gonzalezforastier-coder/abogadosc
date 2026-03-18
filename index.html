@@ -627,7 +627,7 @@ Respondé SOLO con JSON válido, sin markdown, sin texto extra:
 Incluir los 7 días. Días de descanso con ejercicios vacíos. Ejercicios MUY específicos para la posición y condición del jugador.`;
 
   try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    const resp = await fetch('https://corsproxy.io/?url=https://api.anthropic.com/v1/messages', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({
