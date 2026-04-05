@@ -649,7 +649,7 @@ PRIORIDADES DEL ENTRENAMIENTO:
 Adaptá la intensidad y volumen a su nivel de condición (${j.condicion}) y sus días disponibles (${j.frecuencia}/semana).
 ${j.lesiones && j.lesiones.toLowerCase() !== 'ninguna' ? `IMPORTANTE: Evitar ejercicios que afecten: ${j.lesiones}` : ''}
 
-IMPORTANTE: Respondé ÚNICAMENTE con el objeto JSON puro. Sin ```json, sin comillas de código, sin texto antes ni después. Solo el JSON empezando con { y terminando con }. Máximo 4 ejercicios por día:
+Sin bloques de código, sin texto antes ni después. Solo el JSON empezando con { y terminando con }. Máximo 4 ejercicios por día:
 {
   "semana": [
     {
@@ -672,7 +672,8 @@ Incluir los 7 días. Días de descanso con ejercicios vacíos. Ejercicios MUY es
       body: JSON.stringify({
         model:'claude-sonnet-4-20250514',
         max_tokens:2000,
-        messages:[{role:'user',content:prompt}]
+        messages:[{role:'user',content:prompt}],
+system:'Respondés SOLO con JSON puro válido. Tu respuesta empieza con { y termina con }.'
       })
     });
     const data = await resp.json();
