@@ -649,7 +649,7 @@ PRIORIDADES DEL ENTRENAMIENTO:
 Adaptá la intensidad y volumen a su nivel de condición (${j.condicion}) y sus días disponibles (${j.frecuencia}/semana).
 ${j.lesiones && j.lesiones.toLowerCase() !== 'ninguna' ? `IMPORTANTE: Evitar ejercicios que afecten: ${j.lesiones}` : ''}
 
-Respondé SOLO con JSON válido, sin markdown, sin texto extra:
+IMPORTANTE: Respondé ÚNICAMENTE con el objeto JSON puro. Sin ```json, sin comillas de código, sin texto antes ni después. Solo el JSON empezando con { y terminando con }. Máximo 4 ejercicios por día:
 {
   "semana": [
     {
