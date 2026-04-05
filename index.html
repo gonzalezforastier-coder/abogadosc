@@ -896,6 +896,28 @@ document.getElementById('modalEntreno').addEventListener('click',function(e){if(
 document.getElementById('pinOv').addEventListener('click',function(e){if(e.target===this)cerrarPin();});
 
 // Iniciar con Firebase
+// Exponer funciones al scope global
+window.abrirPin = abrirPin;
+window.cerrarPin = cerrarPin;
+window.verificarPin = verificarPin;
+window.showScreen = showScreen;
+window.showPTab = showPTab;
+window.showATab = showATab;
+window.abrirPerfil = abrirPerfil;
+window.guardarDatoFisico = guardarDatoFisico;
+window.guardarPerfilCompleto = guardarPerfilCompleto;
+window.selNivel = selNivel;
+window.generarRutina = generarRutina;
+window.regenerarRutina = regenerarRutina;
+window.toggleDia = toggleDia;
+window.abrirModalEntreno = abrirModalEntreno;
+window.guardarEntreno = guardarEntreno;
+window.cerrarModal = cerrarModal;
+window.guardarNota = guardarNota;
+window.eliminarJugador = eliminarJugador;
+window.agregarJugador = agregarJugador;
+window.cambiarPin = cambiarPin;
+window.borrarTodo = borrarTodo;
 loadDB();
 </script>
 </body>
